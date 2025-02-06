@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Translation</title>
+    <title>Book Translation - Open Source Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Book Translation</h1>
+    <p>This project is an open-source translation initiative.</p>
+    <p>View the source code on <a href="https://github.com/your-repo/translation" target="_blank">GitHub</a>.</p>
+
     <div class="tabs">
         <button class="tab-button" onclick="showTab('front-matter')">Front Matter</button>
         <button class="tab-button" onclick="showTab('chapters')">Chapters</button>
         <button class="tab-button" onclick="showTab('back-matter')">Back Matter</button>
+        <button class="tab-button" onclick="showTab('about')">About</button>
     </div>
 
     <div id="front-matter" class="tab-content">
         <h2>Front Matter</h2>
         <ul>
-            <li><a href="book/front-matter/introduction.html">Introduction</a></li>
+            <li><a href="book/front-matter/title.html">Title Page</a></li>
+            <li><a href="book/front-matter/copyright.html">Copyright Page</a></li>
+            <li><a href="book/front-matter/acknowledgements.html">Acknowledgements</a></li>
+            <li><a href="book/front-matter/abbreviations.html">Abbreviations</a></li>
+            <li><a href="book/front-matter/contents.html">Table of Contents</a></li>
         </ul>
     </div>
 
@@ -40,7 +49,14 @@
         <h2>Back Matter</h2>
         <ul>
             <li><a href="book/back-matter/references.html">References</a></li>
+            <li><a href="book/back-matter/bibliography.html">Bibliography</a></li>
+            <li><a href="book/back-matter/index.html">מפתח</a></li>
         </ul>
+    </div>
+
+    <div id="about" class="tab-content">
+        <h2>About This Project</h2>
+        <p>This book translation is an open-source initiative aimed at making valuable texts more accessible. Contributors can collaborate on improvements via our <a href="https://github.com/your-repo/translation" target="_blank">GitHub repository</a>.</p>
     </div>
 
     <script>
@@ -61,4 +77,5 @@
     </script>
 </body>
 </html>
+
 
