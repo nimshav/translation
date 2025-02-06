@@ -11,11 +11,11 @@
             selectedTab.style.display = 'block';
         }
 
-        // Update the URL without reloading
+        // Update the URL hash without reloading
         history.pushState(null, '', '#' + tabId);
     }
 
-    // Show the correct tab on page load (based on URL hash)
+    // Show the correct tab on page load
     document.addEventListener("DOMContentLoaded", function() {
         const initialTab = window.location.hash ? window.location.hash.substring(1) : 'front-matter';
         showTab(initialTab);
@@ -27,4 +27,5 @@
         showTab(activeTab);
     });
 </script>
+
 
