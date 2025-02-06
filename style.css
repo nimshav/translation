@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab-button:hover {
+    background-color: #0056b3;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#footnotes {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    max-width: 800px;
+}
+
+#footnotes h2 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#footnotes ol {
+    padding-left: 20px;
+}
+
+#footnotes li {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+#footnotes a {
+    color: #d2691e;
+    text-decoration: none;
+}
+
+#footnotes a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Translation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button" onclick="showTab('front-matter')">Front Matter</button>
+        <button class="tab-button" onclick="showTab('chapters')">Chapters</button>
+        <button class="tab-button" onclick="showTab('back-matter')">Back Matter</button>
+    </div>
+
+    <div id="front-matter" class="tab-content">
+        <h2>Front Matter</h2>
+        <ul>
+            <li><a href="book/front-matter/introduction.html">Introduction</a></li>
+        </ul>
+    </div>
+
+    <div id="chapters" class="tab-content">
+        <h2>Chapters</h2>
+        <ul>
+            <li><a href="book/chapters/chapter1.html">Chapter 1</a></li>
+            <li><a href="book/chapters/chapter2.html">Chapter 2</a></li>
+            <li><a href="book/chapters/chapter3.html">Chapter 3</a></li>
+            <li><a href="book/chapters/chapter4.html">Chapter 4</a></li>
+            <li><a href="book/chapters/chapter5.html">Chapter 5</a></li>
+            <li><a href="book/chapters/chapter6.html">Chapter 6</a></li>
+            <li><a href="book/chapters/chapter7.html">Chapter 7</a></li>
+            <li><a href="book/chapters/chapter8.html">Chapter 8</a></li>
+            <li><a href="book/chapters/chapter9.html">Chapter 9</a></li>
+            <li><a href="book/chapters/chapter10.html">Chapter 10</a></li>
+        </ul>
+    </div>
+
+    <div id="back-matter" class="tab-content">
+        <h2>Back Matter</h2>
+        <ul>
+            <li><a href="book/back-matter/references.html">References</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+
+            // Show the selected tab
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        // Show the first tab by default
+        document.addEventListener("DOMContentLoaded", function() {
+            showTab('front-matter');
+        });
+    </script>
+</body>
+</html>
+
