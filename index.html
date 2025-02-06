@@ -9,7 +9,7 @@
 <body>
     <h1>Book Translation</h1>
     <p>This project is an open-source translation initiative.</p>
-    <p>View the source code on <a href="https://github.com/your-repo/translation" target="_blank">GitHub</a>.</p>
+    <p>View the source code on <a href="https://github.com/translation/translation" target="_blank">GitHub</a>.</p>
 
     <div class="tabs">
         <button class="tab-button" onclick="showTab('front-matter')">Front Matter</button>
@@ -21,42 +21,42 @@
     <div id="front-matter" class="tab-content">
         <h2>Front Matter</h2>
         <ul>
-            <li><a href="book/front-matter/title.html">Title Page</a></li>
-            <li><a href="book/front-matter/copyright.html">Copyright Page</a></li>
-            <li><a href="book/front-matter/acknowledgements.html">Acknowledgements</a></li>
-            <li><a href="book/front-matter/abbreviations.html">Abbreviations</a></li>
-            <li><a href="book/front-matter/contents.html">Table of Contents</a></li>
+            <li><a href="/translation/book/front-matter/title.html">Title Page</a></li>
+            <li><a href="/translation/book/front-matter/copyright.html">Copyright Page</a></li>
+            <li><a href="/translation/book/front-matter/acknowledgements.html">Acknowledgements</a></li>
+            <li><a href="/translation/book/front-matter/abbreviations.html">Abbreviations</a></li>
+            <li><a href="/translation/book/front-matter/contents.html">Table of Contents</a></li>
         </ul>
     </div>
 
     <div id="chapters" class="tab-content">
         <h2>Chapters</h2>
         <ul>
-            <li><a href="book/chapters/chapter1.html">Chapter 1</a></li>
-            <li><a href="book/chapters/chapter2.html">Chapter 2</a></li>
-            <li><a href="book/chapters/chapter3.html">Chapter 3</a></li>
-            <li><a href="book/chapters/chapter4.html">Chapter 4</a></li>
-            <li><a href="book/chapters/chapter5.html">Chapter 5</a></li>
-            <li><a href="book/chapters/chapter6.html">Chapter 6</a></li>
-            <li><a href="book/chapters/chapter7.html">Chapter 7</a></li>
-            <li><a href="book/chapters/chapter8.html">Chapter 8</a></li>
-            <li><a href="book/chapters/chapter9.html">Chapter 9</a></li>
-            <li><a href="book/chapters/chapter10.html">Chapter 10</a></li>
+            <li><a href="/translation/book/chapters/chapter1.html">Chapter 1</a></li>
+            <li><a href="/translation/book/chapters/chapter2.html">Chapter 2</a></li>
+            <li><a href="/translation/book/chapters/chapter3.html">Chapter 3</a></li>
+            <li><a href="/translation/book/chapters/chapter4.html">Chapter 4</a></li>
+            <li><a href="/translation/book/chapters/chapter5.html">Chapter 5</a></li>
+            <li><a href="/translation/book/chapters/chapter6.html">Chapter 6</a></li>
+            <li><a href="/translation/book/chapters/chapter7.html">Chapter 7</a></li>
+            <li><a href="/translation/book/chapters/chapter8.html">Chapter 8</a></li>
+            <li><a href="/translation/book/chapters/chapter9.html">Chapter 9</a></li>
+            <li><a href="/translation/book/chapters/chapter10.html">Chapter 10</a></li>
         </ul>
     </div>
 
     <div id="back-matter" class="tab-content">
         <h2>Back Matter</h2>
         <ul>
-            <li><a href="book/back-matter/references.html">References</a></li>
-            <li><a href="book/back-matter/bibliography.html">Bibliography</a></li>
-            <li><a href="book/back-matter/index.html">מפתח</a></li>
+            <li><a href="/translation/book/back-matter/references.html">References</a></li>
+            <li><a href="/translation/book/back-matter/bibliography.html">Bibliography</a></li>
+            <li><a href="/translation/book/back-matter/index.html">מפתח</a></li>
         </ul>
     </div>
 
     <div id="about" class="tab-content">
         <h2>About This Project</h2>
-        <p>This book translation is an open-source initiative aimed at making valuable texts more accessible. Contributors can collaborate on improvements via our <a href="https://github.com/your-repo/translation" target="_blank">GitHub repository</a>.</p>
+        <p>This book translation is an open-source initiative aimed at making valuable texts more accessible. Contributors can collaborate on improvements via our <a href="https://github.com/translation/translation" target="_blank">GitHub repository</a>.</p>
     </div>
 
     <script>
@@ -67,15 +67,29 @@
             });
 
             // Show the selected tab
-            document.getElementById(tabId).style.display = 'block';
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.style.display = 'block';
+            }
+
+            // Update the URL hash without reloading
+            history.pushState(null, '', '#' + tabId);
         }
 
-        // Show the first tab by default
+        // Show the correct tab on page load
         document.addEventListener("DOMContentLoaded", function() {
-            showTab('front-matter');
+            const initialTab = window.location.hash ? window.location.hash.substring(1) : 'front-matter';
+            showTab(initialTab);
+        });
+
+        // Handle back/forward navigation
+        window.addEventListener("popstate", function() {
+            const activeTab = window.location.hash ? window.location.hash.substring(1) : 'front-matter';
+            showTab(activeTab);
         });
     </script>
 </body>
 </html>
+
 
 
