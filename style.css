@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #1b1b1b;
+    color: #e0e0e0;
 }
 
 .tabs {
@@ -13,22 +14,32 @@ body {
     padding: 10px 20px;
     margin: 5px;
     border: none;
-    background-color: #007bff;
+    background-color: #a0522d;
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .tab-button:hover {
-    background-color: #0056b3;
+    background-color: #d2691e;
 }
 
 .tab-content {
     display: none;
     padding: 20px;
-    background: white;
+    background: #2b2b2b;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
+a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffa500;
 }
 
 #footnotes {
@@ -54,10 +65,12 @@ body {
 }
 
 #footnotes a {
-    color: #d2691e;
+    color: #ff8c00;
     text-decoration: none;
 }
 
 #footnotes a:hover {
     text-decoration: underline;
+    color: #ffa500;
 }
+
