@@ -5,44 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abbreviations</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Center the Table */
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Apple-style Table Grid */
+        table {
+            width: 80%;
+            max-width: 900px;
+            border-collapse: collapse;
+            font-size: 1rem;
+            background-color: #2b2b2b;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(255, 140, 0, 0.2);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+
+        th {
+            background-color: #a0522d;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #333;
+        }
+
+        tr:hover {
+            background-color: #444;
+        }
+    </style>
 </head>
 <body>
-    <h1>Abbreviations</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Author</th>
-                <th>Abbreviation</th>
-                <th>English Title</th>
-                <th>Hebrew Title</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Gilles Deleuze</td><td>B</td><td>Bergsonism</td><td>ברגסוניזם</td></tr>
-            <tr><td></td><td>CC</td><td>Essays Critical and Clinical</td><td>מסות ביקורתיות וקליניות</td></tr>
-            <tr><td></td><td>DI</td><td>Desert Islands and Other Texts</td><td>איים שוממים וטקסטים אחרים</td></tr>
-            <tr><td></td><td>DR</td><td>Difference and Repetition</td><td>הבדל וחזרה</td></tr>
-            <tr><td></td><td>EPS</td><td>Expressionism in Philosophy: Spinoza</td><td>אקספרסיוניזם בפילוסופיה: שפינוזה</td></tr>
-            <tr><td></td><td>LS</td><td>The Logic of Sense</td><td>הלוגיקה של החוש</td></tr>
-            <tr><td></td><td>N</td><td>Negotiations 1972‒1990</td><td>משאים ומתנים 1972–1990</td></tr>
-            <tr><td></td><td>NP</td><td>Nietzsche and Philosophy</td><td>ניטשה והפילוסופיה</td></tr>
-            <tr><td></td><td>SPP</td><td>Spinoza: Practical Philosophy</td><td>שפינוזה: פילוסופיה מעשית</td></tr>
-            <tr><td></td><td>TRM</td><td>Two Regimes of Madness</td><td>שני משטרים של שיגעון</td></tr>
-            <tr><td>Gilles Deleuze & Félix Guattari</td><td>AO</td><td>Anti-Oedipus</td><td>אנטי-אדיפוס</td></tr>
-            <tr><td></td><td>ATP</td><td>A Thousand Plateaus</td><td>אלף מישורים</td></tr>
-            <tr><td></td><td>WP</td><td>What is Philosophy?</td><td>מהי פילוסופיה?</td></tr>
-            <tr><td>Gilles Deleuze & Claire Parnet</td><td>Dialogues</td><td>Dialogues II</td><td>דיאלוגים II</td></tr>
-            <tr><td>Jacques Derrida</td><td>AL</td><td>Acts of Literature</td><td>מעשי הספרות</td></tr>
-            <tr><td></td><td>C</td><td>Cinders</td><td>אפר</td></tr>
-            <tr><td></td><td>D</td><td>Dissemination</td><td>הפצה</td></tr>
-            <tr><td></td><td>FK</td><td>Faith and Knowledge</td><td>אמונה וידע</td></tr>
-            <tr><td></td><td>FL</td><td>Force of Law</td><td>כוח החוק</td></tr>
-            <tr><td></td><td>G</td><td>Glas</td><td>גלס</td></tr>
-            <tr><td></td><td>LI</td><td>Limited Inc.</td><td>בע"מ מוגבל</td></tr>
-            <tr><td></td><td>MP</td><td>Margins of Philosophy</td><td>שוליים של הפילוסופיה</td></tr>
-            <tr><td></td><td>OG</td><td>Of Grammatology</td><td>על הגרמטולוגיה</td></tr>
-            <tr><td></td><td>P</td><td>Positions</td><td>עמדות</td></tr>
-        </tbody>
-    </table>
+    <h1 style="text-align: center;">Abbreviations</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Abbreviation</th>
+                    <th>English Title</th>
+                    <th>Hebrew Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gilles Deleuze</td><td>B</td><td>Bergsonism</td><td>ברגסוניזם</td></tr>
+                <tr><td></td><td>CC</td><td>Essays Critical and Clinical</td><td>מסות ביקורתיות וקליניות</td></tr>
+                <tr><td></td><td>DI</td><td>Desert Islands and Other Texts</td><td>איים שוממים וטקסטים אחרים</td></tr>
+                <tr><td></td><td>DR</td><td>Difference and Repetition</td><td>הבדל וחזרה</td></tr>
+                <tr><td></td><td>EPS</td><td>Expressionism in Philosophy: Spinoza</td><td>אקספרסיוניזם בפילוסופיה: שפינוזה</td></tr>
+                <tr><td></td><td>LS</td><td>The Logic of Sense</td><td>הלוגיקה של החוש</td></tr>
+                <tr><td></td><td>N</td><td>Negotiations 1972‒1990</td><td>משאים ומתנים 1972–1990</td></tr>
+                <tr><td></td><td>NP</td><td>Nietzsche and Philosophy</td><td>ניטשה והפילוסופיה</td></tr>
+                <tr><td></td><td>SPP</td><td>Spinoza: Practical Philosophy</td><td>שפינוזה: פילוסופיה מעשית</td></tr>
+                <tr><td></td><td>TRM</td><td>Two Regimes of Madness</td><td>שני משטרים של שיגעון</td></tr>
+                <tr><td>Gilles Deleuze & Félix Guattari</td><td>AO</td><td>Anti-Oedipus</td><td>אנטי-אדיפוס</td></tr>
+                <tr><td></td><td>ATP</td><td>A Thousand Plateaus</td><td>אלף מישורים</td></tr>
+                <tr><td></td><td>WP</td><td>What is Philosophy?</td><td>מהי פילוסופיה?</td></tr>
+                <tr><td>Gilles Deleuze & Claire Parnet</td><td>Dialogues</td><td>Dialogues II</td><td>דיאלוגים II</td></tr>
+                <tr><td>Jacques Derrida</td><td>AL</td><td>Acts of Literature</td><td>מעשי הספרות</td></tr>
+                <tr><td></td><td>C</td><td>Cinders</td><td>אפר</td></tr>
+                <tr><td></td><td>D</td><td>Dissemination</td><td>הפצה</td></tr>
+                <tr><td></td><td>FK</td><td>Faith and Knowledge</td><td>אמונה וידע</td></tr>
+                <tr><td></td><td>FL</td><td>Force of Law</td><td>כוח החוק</td></tr>
+                <tr><td></td><td>G</td><td>Glas</td><td>גלס</td></tr>
+                <tr><td></td><td>LI</td><td>Limited Inc.</td><td>בע"מ מוגבל</td></tr>
+                <tr><td></td><td>MP</td><td>Margins of Philosophy</td><td>שוליים של הפילוסופיה</td></tr>
+                <tr><td></td><td>OG</td><td>Of Grammatology</td><td>על הגרמטולוגיה</td></tr>
+                <tr><td></td><td>P</td><td>Positions</td><td>עמדות</td></tr>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
+
