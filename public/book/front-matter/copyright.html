@@ -15,7 +15,7 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Center content vertically and horizontally */
+    /* Center the container in the viewport (the text itself remains left/right aligned) */
     body {
       display: flex;
       justify-content: center;
@@ -34,14 +34,22 @@
       box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
     }
 
-    /* Center all text within the box */
+    /* Default text styling for English content: left-to-right and left-aligned */
     .content-box h1,
     .content-box h2,
     .content-box h3,
     .content-box p,
     .content-box ul,
-    .content-box li {
-      text-align: center;
+    .content-box li,
+    .content-box a {
+      text-align: left;
+    }
+
+    /* Hebrew Text Support: right-to-left and right-aligned */
+    [lang="he"] {
+      direction: rtl;
+      text-align: right;
+      font-family: Arial, "Noto Sans Hebrew", sans-serif;
     }
 
     /* Link Styling */
@@ -54,15 +62,8 @@
       text-decoration: underline;
       color: #ffa500;
     }
-
-    /* Hebrew Text Support */
-    [lang="he"], .rtl {
-      direction: rtl;
-      text-align: center;
-      font-family: Arial, "Noto Sans Hebrew", sans-serif;
-    }
     
-    /* Center list items */
+    /* List Styling */
     .content-box ul {
       list-style-position: inside;
       padding: 0;
@@ -72,7 +73,7 @@
       margin: 10px 0;
     }
     
-    /* Horizontal rule styling (optional) */
+    /* Horizontal rule styling */
     .content-box hr {
       border: none;
       border-top: 1px solid #444;
@@ -131,4 +132,5 @@
   </div>
 </body>
 </html>
+
 
