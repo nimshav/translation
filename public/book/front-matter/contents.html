@@ -12,7 +12,6 @@
       background-color: #1b1b1b;
       color: #e0e0e0;
       font-family: "Arial", "Noto Sans Hebrew", sans-serif;
-      height: 100%;
       direction: rtl;
     }
 
@@ -21,23 +20,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
       padding: 20px;
     }
 
     /* Main Content Box */
     .content-box {
-      width: 90%;
-      max-width: 800px;
+      width: 100%;
+      max-width: 600px; /* Standard presentation size */
       background-color: #2b2b2b;
       border: 1px solid #444;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
-      padding: 40px;
+      padding: 30px;
     }
 
     /* Header */
     h1 {
       text-align: center;
+      font-size: 1.5rem;
       margin-bottom: 20px;
     }
 
@@ -45,15 +46,15 @@
     .contents-list {
       list-style: none;
       padding: 0;
+      font-size: 1rem; /* Standard font size */
     }
 
     /* List Item Styling */
     .contents-list li {
       display: flex;
       justify-content: space-between;
-      font-size: 1.1rem;
       border-bottom: 1px dashed #777;
-      padding: 8px 0;
+      padding: 6px 0;
     }
 
     /* Section Headers */
@@ -61,6 +62,7 @@
       font-weight: bold;
       text-decoration: underline;
       margin-top: 15px;
+      font-size: 1.1rem;
     }
 
     /* Links (if needed in the future) */
@@ -109,5 +111,6 @@
   </div>
 </body>
 </html>
+
 
 
