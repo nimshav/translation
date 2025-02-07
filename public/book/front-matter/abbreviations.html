@@ -1,77 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abbreviations</title>
+  <title>קיצורים</title>
   <link rel="stylesheet" href="../style.css">
   <style>
     /* Global Dark Mode */
     html, body {
       background-color: #1b1b1b;
       color: #e0e0e0;
-      font-family: Arial, sans-serif;
+      font-family: "Arial", "Noto Sans Hebrew", sans-serif;
       margin: 0;
       padding: 0;
+      text-align: right;
     }
-    
-    /* Center the Table Container */
+
+    /* Center Table Container */
     .table-container {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px;
+      width: 100%;
     }
-    
-    /* Apple-style Table Grid */
+
+    /* Table Styling */
     table {
-      width: 80%;
-      max-width: 900px;
+      width: 100%;
+      max-width: 700px; /* Standard width for readability */
       border-collapse: collapse;
       font-size: 1rem;
-      background-color: #323232; /* slightly lighter than the rest of dark mode */
+      background-color: #323232;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(255, 140, 0, 0.2);
     }
-    
+
     th, td {
-      padding: 12px;
-      text-align: left;
+      padding: 10px;
+      text-align: right;
       border-bottom: 1px solid #444;
     }
-    
+
     th {
       background-color: #a0522d;
       color: white;
       font-weight: bold;
     }
-    
-    /* Lighter row backgrounds for better readability */
+
+    /* Alternate Row Coloring */
     tr:nth-child(even) {
       background-color: #3a3a3a;
     }
-    
+
     tr:hover {
       background-color: #444;
+    }
+
+    /* Centered Header */
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1 style="text-align: center;">Abbreviations</h1>
+  <h1>קיצורים</h1>
 
   <div class="table-container">
     <table>
       <thead>
         <tr>
-          <th>Author</th>
-          <th>Abbreviation</th>
-          <th>English Title</th>
-          <th>Hebrew Title</th>
+          <th>מחבר</th>
+          <th>קיצור</th>
+          <th>כותרת באנגלית</th>
+          <th>כותרת בעברית</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Gilles Deleuze</td><td>B</td><td>Bergsonism</td><td>ברגסוניזם</td></tr>
+        <tr><td>ז'יל דלז</td><td>B</td><td>Bergsonism</td><td>ברגסוניזם</td></tr>
         <tr><td></td><td>CC</td><td>Essays Critical and Clinical</td><td>מסות ביקורתיות וקליניות</td></tr>
         <tr><td></td><td>DI</td><td>Desert Islands and Other Texts</td><td>איים שוממים וטקסטים אחרים</td></tr>
         <tr><td></td><td>DR</td><td>Difference and Repetition</td><td>הבדל וחזרה</td></tr>
@@ -81,11 +90,11 @@
         <tr><td></td><td>NP</td><td>Nietzsche and Philosophy</td><td>ניטשה והפילוסופיה</td></tr>
         <tr><td></td><td>SPP</td><td>Spinoza: Practical Philosophy</td><td>שפינוזה: פילוסופיה מעשית</td></tr>
         <tr><td></td><td>TRM</td><td>Two Regimes of Madness</td><td>שני משטרים של שיגעון</td></tr>
-        <tr><td>Gilles Deleuze & Félix Guattari</td><td>AO</td><td>Anti-Oedipus</td><td>אנטי-אדיפוס</td></tr>
+        <tr><td>ז'יל דלז & פליקס גואטארי</td><td>AO</td><td>Anti-Oedipus</td><td>אנטי-אדיפוס</td></tr>
         <tr><td></td><td>ATP</td><td>A Thousand Plateaus</td><td>אלף מישורים</td></tr>
         <tr><td></td><td>WP</td><td>What is Philosophy?</td><td>מהי פילוסופיה?</td></tr>
-        <tr><td>Gilles Deleuze & Claire Parnet</td><td>Dialogues</td><td>Dialogues II</td><td>דיאלוגים II</td></tr>
-        <tr><td>Jacques Derrida</td><td>AL</td><td>Acts of Literature</td><td>מעשי הספרות</td></tr>
+        <tr><td>ז'יל דלז & קלייר פארנה</td><td>Dialogues</td><td>Dialogues II</td><td>דיאלוגים II</td></tr>
+        <tr><td>ז'אק דרידה</td><td>AL</td><td>Acts of Literature</td><td>מעשי הספרות</td></tr>
         <tr><td></td><td>C</td><td>Cinders</td><td>אפר</td></tr>
         <tr><td></td><td>D</td><td>Dissemination</td><td>הפצה</td></tr>
         <tr><td></td><td>FK</td><td>Faith and Knowledge</td><td>אמונה וידע</td></tr>
@@ -101,5 +110,6 @@
 
 </body>
 </html>
+
 
 
