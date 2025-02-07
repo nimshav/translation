@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>כותרת</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>כותרת</title>
+  <style>
+    /* Ensure the full viewport is used and dark mode is applied */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #1b1b1b;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center content both vertically and horizontally */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Box styling for the title page */
+    .title-page {
+      width: 90%;
+      max-width: 800px;
+      padding: 40px;
+      background: #2b2b2b;
+      border: 1px solid #444;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+      text-align: center;
+    }
+
+    /* Hebrew text support: force right-to-left direction */
+    [lang="he"] {
+      direction: rtl;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="title-page">
-        <h1>דלז ודרידה</h1>
-        <h2>הבדל וכוח השלילה</h2>
-        <h3>ורנון וו. סיזני</h3>
-    </div>
+  <div class="title-page">
+    <h1>דלז ודרידה</h1>
+    <h2>הבדל וכוח השלילה</h2>
+    <h3>ורנון וו. סיזני</h3>
+  </div>
 </body>
 </html>
