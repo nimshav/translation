@@ -7,9 +7,21 @@ body {
     color: #e0e0e0;
 }
 
+/* Frame Each Content Block */
+.content-frame {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+    border: 1px solid #444;
+}
+
 /* Tabs */
 .tabs {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .tab-button {
@@ -30,8 +42,9 @@ body {
     display: none;
     padding: 20px;
     background: #2b2b2b;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+    border: 1px solid #444;
 }
 
 /* Links */
@@ -78,15 +91,23 @@ a:hover {
     color: #ffa500;
 }
 
-/* Hebrew Text Support */
-[lang="he"] {
+/* Hebrew Text Support - Ensure Right-to-Left Alignment */
+[lang="he"], .rtl {
     direction: rtl;
     text-align: right;
     font-family: "Arial", "Noto Sans Hebrew", sans-serif;
+    unicode-bidi: bidi-override;
 }
 
-/* Ensure All Pages Use Dark Mode */
-html, body {
-    background-color: #1b1b1b !important;
-    color: #e0e0e0 !important;
+/* Page Numbering */
+.page-footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #e0e0e0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
 }
