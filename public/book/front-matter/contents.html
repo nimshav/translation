@@ -5,79 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>תוכן עניינים</title>
   <style>
-    /* Global Dark Mode */
+    /* Global Styles */
     html, body {
       margin: 0;
       padding: 0;
       background-color: #1b1b1b;
       color: #e0e0e0;
-      font-family: Arial, sans-serif;
+      font-family: "Arial", "Noto Sans Hebrew", sans-serif;
       height: 100%;
+      direction: rtl;
     }
-    
-    /* Center the container vertically and horizontally */
+
+    /* Center Content */
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px;
     }
-    
-    /* Container for the Contents tab */
+
+    /* Main Content Box */
     .content-box {
       width: 90%;
       max-width: 800px;
-      background-color: #2b2b2b;  /* A dark background that's not too dark */
+      background-color: #2b2b2b;
       border: 1px solid #444;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
       padding: 40px;
-      direction: rtl;
     }
-    
-    /* Contents text styling */
-    pre {
-      font-family: "Courier New", Courier, monospace;
-      white-space: pre-wrap;
-      font-size: 1.1rem;
-      margin: 0;
-    }
-    
-    /* Center header */
+
+    /* Header */
     h1 {
       text-align: center;
-      margin-top: 0;
       margin-bottom: 20px;
     }
+
+    /* Table of Contents List */
+    .contents-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    /* List Item Styling */
+    .contents-list li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      border-bottom: 1px dashed #777;
+      padding: 8px 0;
+    }
+
+    /* Section Headers */
+    .section-header {
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 15px;
+    }
+
+    /* Links (if needed in the future) */
+    a {
+      color: #ff8c00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
   <div class="content-box">
     <h1>תוכן עניינים</h1>
-    <pre>
-דף כותרת...............................................................................................................
-דף זכויות יוצרים.....................................................................................................
-תוכן עניינים...........................................................................................................
-תודות....................................................................................................................
-קיצורים.................................................................................................................
-חלק ראשון: מבוא
-השאלה..................................................................................................................
-ביסוס השאלה........................................................................................................
-חלק שני: העוצמה הכבירה של השלילה
-שני עמודי התווך של הדקונסטרוקציה.........................................................................
-דלז והבדל הגליאני..................................................................................................
-העוצמה האדירה של השלילה....................................................................................
-חלק שלישי: לחשוב את ההבדל עצמו
-עקבות ואפר...........................................................................................................
-דלז, היפוך אפלטון והשיבה הנצחית............................................................................
-דרידה, דלז והבדל...................................................................................................
-חלק רביעי: השלכות ומסקנות
-דקונסטרוקציה מול קונסטרוקטיביזם...........................................................................
-מסקנה(ות).............................................................................................................
-ביבליוגרפיה...........................................................................................................
-מפתח....................................................................................................................
-    </pre>
+    <ul class="contents-list">
+      <li><span>דף כותרת</span><span>...</span></li>
+      <li><span>דף זכויות יוצרים</span><span>...</span></li>
+      <li><span>תוכן עניינים</span><span>...</span></li>
+      <li><span>תודות</span><span>...</span></li>
+      <li><span>קיצורים</span><span>...</span></li>
+
+      <li class="section-header">חלק ראשון: מבוא</li>
+      <li><span>השאלה</span><span>...</span></li>
+      <li><span>ביסוס השאלה</span><span>...</span></li>
+
+      <li class="section-header">חלק שני: העוצמה הכבירה של השלילה</li>
+      <li><span>שני עמודי התווך של הדקונסטרוקציה</span><span>...</span></li>
+      <li><span>דלז והבדל הגליאני</span><span>...</span></li>
+      <li><span>העוצמה האדירה של השלילה</span><span>...</span></li>
+
+      <li class="section-header">חלק שלישי: לחשוב את ההבדל עצמו</li>
+      <li><span>עקבות ואפר</span><span>...</span></li>
+      <li><span>דלז, היפוך אפלטון והשיבה הנצחית</span><span>...</span></li>
+      <li><span>דרידה, דלז והבדל</span><span>...</span></li>
+
+      <li class="section-header">חלק רביעי: השלכות ומסקנות</li>
+      <li><span>דקונסטרוקציה מול קונסטרוקטיביזם</span><span>...</span></li>
+      <li><span>מסקנה(ות)</span><span>...</span></li>
+
+      <li><span>ביבליוגרפיה</span><span>...</span></li>
+      <li><span>מפתח</span><span>...</span></li>
+    </ul>
   </div>
 </body>
 </html>
+
 
