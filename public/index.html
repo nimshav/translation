@@ -1,76 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Source Humanities Translation of "Deleuze and Derrida: Difference and the Power of the Negative" (Vernon Cisney, 2018)</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Source Humanities Translation of "Deleuze and Derrida: Difference and the Power of the Negative" (Vernon Cisney, 2018)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles & Dark Mode */
+    html, body {
+      background-color: #1b1b1b;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      padding: 20px;
+    }
+    h1, h2, p {
+      text-align: center;
+    }
+
+    /* Tabs Navigation */
+    .tabs {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .tab-button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #a0522d;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .tab-button:hover {
+      background-color: #d2691e;
+    }
+    
+    /* Tab Content Styling */
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background: #2b2b2b;
+      border: 1px solid #444;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+    }
+    
+    /* Specific styling for the Contents tab */
+    .tab-content pre {
+      font-family: "Courier New", Courier, monospace;
+      white-space: pre-wrap;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Open Source Humanities Translation</h1>
-    <p>This project is an open-source translation initiative.</p>
-    <p>View the source code on <a href="https://github.com/nimshav/translation" target="_blank">GitHub</a>.</p>
+  <h1>Open Source Humanities Translation</h1>
+  <h2>of "Deleuze and Derrida: Difference and the Power of the Negative" (Vernon Cisney, 2018)</h2>
+  <p>This project is an open-source translation initiative.</p>
+  <p>View the source code on <a href="https://github.com/nimshav/translation" target="_blank" style="color: #ff8c00;">GitHub</a>.</p>
 
-    <div class="tabs">
-        <button class="tab-button" onclick="showTab('front-matter')">Front Matter</button>
-        <button class="tab-button" onclick="showTab('chapters')">Chapters</button>
-        <button class="tab-button" onclick="showTab('back-matter')">Back Matter</button>
-        <button class="tab-button" onclick="showTab('about')">About</button>
-    </div>
+  <!-- Tabs Navigation -->
+  <div class="tabs">
+    <button class="tab-button" onclick="showTab('contents')">Contents</button>
+    <button class="tab-button" onclick="showTab('front-matter')">Front Matter</button>
+    <button class="tab-button" onclick="showTab('chapters')">Chapters</button>
+    <button class="tab-button" onclick="showTab('back-matter')">Back Matter</button>
+    <button class="tab-button" onclick="showTab('about')">About</button>
+  </div>
 
-    <div id="front-matter" class="tab-content">
-        <h2>Front Matter</h2>
-        <ul>
-            <li><a href="book/front-matter/title.html">Title Page</a></li>
-            <li><a href="book/front-matter/copyright.html">Copyright Page</a></li>
-            <li><a href="book/front-matter/acknowledgements.html">Acknowledgements</a></li>
-            <li><a href="book/front-matter/abbreviations.html">Abbreviations</a></li>
-        </ul>
-    </div>
+  <!-- Tab Contents -->
+  <div id="contents" class="tab-content">
+    <h2 style="text-align: center;">תוכן עניינים</h2>
+    <pre>
+דף כותרת...............................................................................................................
+דף זכויות יוצרים.....................................................................................................
+תוכן עניינים...........................................................................................................
+תודות....................................................................................................................
+קיצורים.................................................................................................................
+חלק ראשון: מבוא
+השאלה..................................................................................................................
+ביסוס השאלה........................................................................................................
+חלק שני: העוצמה הכבירה של השלילה
+שני עמודי התווך של הדקונסטרוקציה.........................................................................
+דלז והבדל הגליאני..................................................................................................
+העוצמה האדירה של השלילה....................................................................................
+חלק שלישי: לחשוב את ההבדל עצמו
+עקבות ואפר...........................................................................................................
+דלז, היפוך אפלטון והשיבה הנצחית............................................................................
+דרידה, דלז והבדל...................................................................................................
+חלק רביעי: השלכות ומסקנות
+דקונסטרוקציה מול קונסטרוקטיביזם...........................................................................
+מסקנה(ות).............................................................................................................
+ביבליוגרפיה...........................................................................................................
+מפתח....................................................................................................................
+    </pre>
+  </div>
 
-    <div id="chapters" class="tab-content">
-        <h2>Chapters</h2>
-        <ul>
-            <li><a href="book/chapters/chapter1.html">Chapter 1</a></li>
-            <li><a href="book/chapters/chapter2.html">Chapter 2</a></li>
-            <li><a href="book/chapters/chapter3.html">Chapter 3</a></li>
-            <li><a href="book/chapters/chapter4.html">Chapter 4</a></li>
-            <li><a href="book/chapters/chapter5.html">Chapter 5</a></li>
-            <li><a href="book/chapters/chapter6.html">Chapter 6</a></li>
-            <li><a href="book/chapters/chapter7.html">Chapter 7</a></li>
-            <li><a href="book/chapters/chapter8.html">Chapter 8</a></li>
-            <li><a href="book/chapters/chapter9.html">Chapter 9</a></li>
-            <li><a href="book/chapters/chapter10.html">Chapter 10</a></li>
-        </ul>
-    </div>
+  <div id="front-matter" class="tab-content">
+    <h2>Front Matter</h2>
+    <ul>
+      <li><a href="book/front-matter/title.html" style="color: #ff8c00;">Title Page</a></li>
+      <li><a href="book/front-matter/copyright.html" style="color: #ff8c00;">Copyright Page</a></li>
+      <li><a href="book/front-matter/acknowledgements.html" style="color: #ff8c00;">Acknowledgements</a></li>
+      <li><a href="book/front-matter/abbreviations.html" style="color: #ff8c00;">Abbreviations</a></li>
+    </ul>
+  </div>
 
-    <div id="back-matter" class="tab-content">
-        <h2>Back Matter</h2>
-        <ul>
-            <li><a href="book/back-matter/references.html">References</a></li>
-        </ul>
-    </div>
+  <div id="chapters" class="tab-content">
+    <h2>Chapters</h2>
+    <ul>
+      <li><a href="book/chapters/chapter1.html" style="color: #ff8c00;">Chapter 1</a></li>
+      <li><a href="book/chapters/chapter2.html" style="color: #ff8c00;">Chapter 2</a></li>
+      <li><a href="book/chapters/chapter3.html" style="color: #ff8c00;">Chapter 3</a></li>
+      <li><a href="book/chapters/chapter4.html" style="color: #ff8c00;">Chapter 4</a></li>
+      <li><a href="book/chapters/chapter5.html" style="color: #ff8c00;">Chapter 5</a></li>
+      <li><a href="book/chapters/chapter6.html" style="color: #ff8c00;">Chapter 6</a></li>
+      <li><a href="book/chapters/chapter7.html" style="color: #ff8c00;">Chapter 7</a></li>
+      <li><a href="book/chapters/chapter8.html" style="color: #ff8c00;">Chapter 8</a></li>
+      <li><a href="book/chapters/chapter9.html" style="color: #ff8c00;">Chapter 9</a></li>
+      <li><a href="book/chapters/chapter10.html" style="color: #ff8c00;">Chapter 10</a></li>
+    </ul>
+  </div>
 
-    <div id="about" class="tab-content">
-        <h2>About This Project</h2>
-        <p>This book translation is an open-source initiative aimed at making valuable texts more accessible. Contributors can collaborate on improvements via our <a href="https://github.com/nimshav/translation" target="_blank">GitHub repository</a>.</p>
-    </div>
+  <div id="back-matter" class="tab-content">
+    <h2>Back Matter</h2>
+    <ul>
+      <li><a href="book/back-matter/references.html" style="color: #ff8c00;">References</a></li>
+    </ul>
+  </div>
 
-    <script>
-        function showTab(tabId) {
-            // Hide all tab content
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.style.display = 'none';
-            });
+  <div id="about" class="tab-content">
+    <h2>About This Project</h2>
+    <p>This book translation is an open-source initiative aimed at making valuable texts more accessible. Contributors can collaborate on improvements via our <a href="https://github.com/nimshav/translation" target="_blank" style="color: #ff8c00;">GitHub repository</a>.</p>
+  </div>
 
-            // Show the selected tab
-            document.getElementById(tabId).style.display = 'block';
-        }
-
-        // Show the first tab by default
-        document.addEventListener("DOMContentLoaded", function() {
-            showTab('front-matter');
-        });
-    </script>
+  <script>
+    function showTab(tabId) {
+      // Hide all tab content
+      document.querySelectorAll('.tab-content').forEach(function(tab) {
+        tab.style.display = 'none';
+      });
+      // Show the selected tab
+      document.getElementById(tabId).style.display = 'block';
+    }
+    // Show the Contents tab by default
+    document.addEventListener("DOMContentLoaded", function() {
+      showTab('contents');
+    });
+  </script>
 </body>
 </html>
