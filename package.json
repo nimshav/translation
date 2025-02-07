@@ -1,16 +1,15 @@
 {
-  "name": "your-app",
+  "name": "translation",
   "version": "1.0.0",
-  "description": "A simple static site",
+  "description": "Book translation site",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.21.2"
   },
   "engines": {
     "node": "18.x"
   }
 }
-
