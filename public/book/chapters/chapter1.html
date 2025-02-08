@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>פרק 1</title>
   <style>
-    /* Global Styles */
+    /* Global Dark Mode & Basic Styles */
     html, body {
       margin: 0;
       padding: 0;
@@ -14,92 +14,140 @@
       font-family: "Arial", "Noto Sans Hebrew", sans-serif;
       direction: rtl;
       text-align: right;
+      line-height: 1.6;
     }
-    /* Paragraph Box Styling */
-    .paragraph-box {
+    /* Main content container */
+    .content-frame {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
       background: #2b2b2b;
       border: 1px solid #444;
       border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      line-height: 1.5;
     }
-    /* Footnote Tooltip Styles */
-    .footnote {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
+    /* Chapter subheading */
+    .chapter-heading {
+      text-align: center;
+      margin-bottom: 20px;
     }
-    .footnote .footnote-content {
-      visibility: hidden;
-      width: 250px;
-      background-color: #222;
-      color: #e0e0e0;
-      text-align: right;
-      border-radius: 6px;
-      padding: 8px;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%; /* position above the marker */
-      right: 0;    /* adjust for RTL layout */
-      opacity: 0;
-      transition: opacity 0.3s;
+    /* Each paragraph appears in its own box */
+    .paragraph-box {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #2b2b2b;
+      border: 1px solid #444;
+      border-radius: 10px;
     }
-    .footnote .footnote-content::after {
-      content: "";
-      position: absolute;
-      top: 100%; /* arrow at the bottom of the tooltip */
-      right: 10px; /* adjust for RTL */
-      border-width: 5px;
-      border-style: solid;
-      border-color: #222 transparent transparent transparent;
+    /* Footnote marker styling */
+    sup a {
+      color: #ff8c00;
+      text-decoration: none;
+      font-size: 0.9em;
     }
-    .footnote:hover .footnote-content {
-      visibility: visible;
-      opacity: 1;
+    sup a:hover {
+      text-decoration: underline;
+    }
+    /* Footnotes section */
+    #footnotes {
+      margin-top: 40px;
+      padding: 15px;
+      background: #222;
+      border-radius: 5px;
+    }
+    #footnotes h2 {
+      margin-top: 0;
+    }
+    #footnotes ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #footnotes li {
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+    /* Backlink styling for footnotes */
+    .back-link {
+      font-size: 0.9em;
+      margin-right: 5px;
+      text-decoration: none;
+      color: #ff8c00;
+    }
+    .back-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Example Paragraph Box with Inline Footnotes -->
-  <div class="paragraph-box">
-    <p>
-      בשל רצונם המשותף לנסח תפיסות הבדל שאינן דיאלקטיות ואינן הגליאניות, אפשר לחשוד, ובצדק, כי לדלז ולדרידה יש תפיסות דומות, אם לא זהות, של הבדל. במעט הדיאלוג הטקסטואלי שמתקיים ביניהם, נראה כי הם עצמם היו מסכימים להערכה זו. 
-      <!-- Footnote marker [2] -->
-      <sup class="footnote">
-        <a href="#">[2]</a>
-        <span class="footnote-content">
-          Nealon, ‘Beyond Hermeneutics: Deleuze, Derrida and Contemporary Theory’, in Patton and Protevi (eds), Between Deleuze and Derrida, 158.
-        </span>
-      </sup>
-      אמנם איני יכול להסכים לחלוטין עם עמדתו של ג׳פרי נילון כי ״דלז ודרידה הקפידו להימנע לחלוטין מכתיבה זה על עבודתו של זה״, אך אין ספק שהם מתייחסים זה לזה רק לעיתים נדירות, וכמעט תמיד באופן מחמיא. במותו של דלז, דרידה ציין כי חווה ״קרבה או כמעט-התאמה מוחלטת״ עמו בנוגע לתזה בדבר הבבדל שאינו ניתן לצמצום לאופוזיציה דיאלקטית, ואף הוסיף: 
-      <!-- Footnote marker [3] -->
-      <sup class="footnote">
-        <a href="#">[3]</a>
-        <span class="footnote-content">
-          WM, 192–3.
-        </span>
-      </sup>
-      <!-- Additional markers if needed -->
-      <sup class="footnote">
-        <a href="#">[4]</a>
-        <span class="footnote-content">
-          WM, 192–3.
-        </span>
-      </sup>
-      <sup class="footnote">
-        <a href="#">[5]</a>
-        <span class="footnote-content">
-          DI, 260.
-        </span>
-      </sup>
-    </p>
+  <div class="content-frame">
+    <!-- Chapter Subheading -->
+    <h2 class="chapter-heading">השאלה</h2>
+
+    <!-- Paragraph 1 -->
+    <div class="paragraph-box">
+      <p>
+        אם נבקש לזקק את הפילוסופיה הקונטיננטלית של המאה העשרים לשאלה מרכזית אחת, הרי שזו תהיה ״בעיית ההבדל.״ בליבה עומדת הדרישה להמשיג הבדל שאינו נגזר מתוך הנחת זהויות נתונות מראש, אלא מהווה את היסוד המכונן של הנחות אלו עצמן. תפיסה זו מופיעה בניסוחים שונים: היידגר מנסח את ה״הבדל האונטי-אונטולוגי״ ולאחר מכן את ה-״dif-ferenz״; מרלו-פונטי מציג את מושג ה״בשר״ הכיאזמטי; לוינס מדגיש את ״פני האחר;״ פוקו מנסח את "מחשבת החוץ;״, איריגריי עוסקת ב״הבדל המיני;״, באטלר מפתחת את מושג ״הפרפורמטיביות המגדרית;״ וליוטאר מנסח את ה״דיפרנד.״ יחד, מושגים אלה משקפים תחושה מרכזית בפילוסופיה הקונטיננטלית: בכל תחום—אונטולוגי, אתי, חברתי או פוליטי—מאמצי ההבנה של טבע הדברים נתקלים שוב ושוב במגבלותיהן של אותן קטגוריות זהות נוקשות וסגורות, אשר אינן מתארות את ההוויה כפי שהיא, אלא מכוננות את גבולות המחשבה עצמה.
+      </p>
+    </div>
+
+    <!-- Paragraph 2 -->
+    <div class="paragraph-box">
+      <p>
+        כאשר המחשבה הפילוסופית נותרת תחומה במה שמשותף לדברים—בסדר של הזהה—היא מחמיצה את אופנם הייחודי, את אותה ״דבריות״ של הדבר (haecceity או thisness), כפי שתיאר זאת ג׳ון דאנס סקוטוס. כדי לתפוס את מהותו האמיתית של דבר, אין להסתפק בקטגוריות הזהות שדרכן ובאמצעותן ניתן לחשוב אותו, אלא יש לעקוב גם אחר תהליך ההיבדלות והעיצוב של קטגוריות אלה עצמן. ״בעיית ההבדל״ נובעת מכך שהיבדלות קטגוריאלית זו חומקת מכל מסגרת ייצוגית סטטית, ולכן מכל ניסיון פילוסופי לתחום אותה בתוך קטגוריית הזהות של אחד מהצדדים המובדלים. נשאלת אפוא השאלה: מהו ההבדל כשלעצמו – טרם צמצומו ליחסים אמפיריים בין זהויות נתונות מראש, או לסתירה דיאלקטית המבקשת, בסופו של דבר, לגבשו לכדי זהות יציבה אחת? ״פילוסופיית ההבדל״ היא השם שניתן למסורת המבקשת להתמודד עם בעיה זו.
+      </p>
+    </div>
+
+    <!-- Paragraph 3 -->
+    <div class="paragraph-box">
+      <p>
+        במסורת זו בולטים במיוחד ז׳יל דלז וז׳אק דרידה, אשר מתייחסים ישירות לבעיית ההבדל באמצעות ניסוח המשגות משלהם: ״הבדל כשלעצמו״ (difference in itself) ו״דיפראנס״ (différance), בהתאמה. בעוד שהוגים אחרים עוסקים בשאלת ההבדל בתוך הקשרים ספציפיים—אתיים, אפיסטמיים, סובייקטיביים, מיניים וכדומה—דלז ודרידה מתמודדים עם בעיית ההבדל עצמו. לפיכך, ניתן לומר, במובן שאצטרך להגדיר ולהגן עליו בהמשך, כי המשגותיהם פועלות במישור האונטולוגי. עבורם, שאלת ההבדל כרוכה בעיסוק מעמיק בשאלות של הוויה וזמן, זהות וכוח, ומשמעות, לאורך ההיסטוריה של המטפיזיקה המערבית—מהרקליטוס ופרמנידס, דרך הגל, ניטשה והיידגר—ומגיעה לשיאה בתפיסות מקוריות וייחודיות, שנוצרו כדי לאפשר מחשבה על הבלתי אפשרי: תנאי ההיתכנות של הזהות והמחשבה עצמה. אל המהלך הזה בדיוק מתייחס ונסן דסקום, כאשר הוא מדבר על ״הנקודה יוצאת הדופן של המטפיזיקה המודרנית, עליה רמז כל שיח שקדם לה כמו מצפן מהבהב,״ ומכנה את הפילוסופיה של ההבדל ״ליבת״ הפילוסופיה הצרפתית העכשווית 
+        <sup><a href="#footnote1" id="ref1">[1]</a></sup>.
+      </p>
+    </div>
+
+    <!-- Paragraph 4 -->
+    <div class="paragraph-box">
+      <p>
+        בשל רצונם המשותף לנסח תפיסות הבדל שאינן דיאלקטיות ואינן הגליאניות, אפשר לחשוד, ובצדק, כי לדלז ולדרידה יש תפיסות דומות, אם לא זהות, של הבדל. במעט הדיאלוג הטקסטואלי שמתקיים ביניהם, נראה כי הם עצמם היו מסכימים להערכה זו. אמנם איני יכול להסכים לחלוטין עם עמדתו של ג׳פרי נילון כי ״דלז ודרידה הקפידו להימנע לחלוטין מכתיבה זה על עבודתו של זה״
+        <sup><a href="#footnote2" id="ref2">[2]</a></sup>,
+        אך אין ספק שהם מתייחסים זה לזה רק לעיתים נדירות, וכמעט תמיד באופן מחמיא. במותו של דלז, דרידה ציין כי חווה ״קרבה או כמעט-התאמה מוחלטת״ עמו בנוגע לתזה בדבר הבדל שאינו ניתן לצמצום לאופוזיציה דיאלקטית, ואף הוסיף: ״יום אחד ארצה לנסות להציג תיאור של הסכמה כזו בכל הנוגע ל׳תוכן הפילוסופי״
+        <sup><a href="#footnote3" id="ref3">[3]</a></sup>. 
+        במקרים המעטים שבהם דרידה ודלז עצמם מדברים על ההבדלים ביניהם, הם נוטים להמעיט מחשיבותם ולתארם כהבדלים סגנוניים או מתודולוגיים בלבד. דרידה מדבר על ״פערים במה שהייתי מכנה, בהיעדר מונח טוב יותר, ה׳מחווה,׳ ה׳אסטרטגיה,׳ ה׳אופן׳ של כתיבה, דיבור ואולי גם קריאה״
+        <sup><a href="#footnote4" id="ref4">[4]</a></sup>,
+        ואילו דלז כותב: ״אשר לשיטת הדקונסטרוקציה הטקסטואלית, אני יודע מהי ואני מעריץ אותה, אך אין לה שום קשר לשיטתי שלי״
+        <sup><a href="#footnote5" id="ref5">[5]</a></sup>.
+      </p>
+    </div>
+
+    <!-- (You can continue with additional paragraph-box divs as needed) -->
+  </div>
+
+  <!-- Footnotes Section -->
+  <div id="footnotes" class="content-frame">
+    <h2>הערות תחתונות</h2>
+    <ol>
+      <li id="footnote1">
+        <a href="#ref1" class="back-link">[1]</a>
+        דסקום, Modern French Philosophy, 136.
+      </li>
+      <li id="footnote2">
+        <a href="#ref2" class="back-link">[2]</a>
+        Nealon, ‘Beyond Hermeneutics: Deleuze, Derrida and Contemporary Theory’, in Patton and Protevi (eds), Between Deleuze and Derrida, 158.
+      </li>
+      <li id="footnote3">
+        <a href="#ref3" class="back-link">[3]</a>
+        WM, 192–3.
+      </li>
+      <li id="footnote4">
+        <a href="#ref4" class="back-link">[4]</a>
+        WM, 192–3.
+      </li>
+      <li id="footnote5">
+        <a href="#ref5" class="back-link">[5]</a>
+        DI, 260.
+      </li>
+      <!-- Continue with additional footnotes as needed -->
+    </ol>
   </div>
 </body>
 </html>
-
-
-
-
-
