@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
-    Set the base URL to your repository name.
-    This tells the browser that all relative URLs (without a leading slash)
-    should be resolved as: https://username.github.io/translation/...
-  -->
+  <!-- Corrected base tag; all relative URLs will be resolved against this -->
   <base href="/translation/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Source Humanities Translation of Vernon Cisney's (2018) Deleuze, Derrida and the Power of the Negative</title>
-  <!-- Use a relative path for the stylesheet so that it resolves as /translation/style.css -->
+  <!-- Use relative path for the stylesheet -->
   <link rel="stylesheet" href="style.css">
   <style>
     /* Global Styles & Dark Mode */
@@ -136,10 +132,11 @@
       showTab('front-matter');
     });
   </script>
-  <!-- Load footnotes.js from the relative path (which becomes /translation/footnotes.js) -->
+  <!-- Load footnotes.js relative to the base -->
   <script src="footnotes.js"></script>
 </body>
 </html>
+
 
 
 
