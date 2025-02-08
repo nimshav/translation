@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Source Humanities Translation of Vernon Cisney's (2018) Deleuze, Derrida and the Power of the Negative</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Absolute path so that style.css is loaded from the public folder root -->
+  <link rel="stylesheet" href="/style.css">
   <style>
     /* Global Styles & Dark Mode */
     html, body {
@@ -79,34 +80,35 @@
   <div id="front-matter" class="tab-content">
     <h2>Front Matter</h2>
     <ul>
-      <li><a href="book/front-matter/title.html">Title Page</a></li>
-      <li><a href="book/front-matter/copyright.html">Copyright Page</a></li>
-      <li><a href="book/front-matter/acknowledgements.html">Acknowledgements</a></li>
-      <li><a href="book/front-matter/contents.html">Contents</a></li>
-      <li><a href="book/front-matter/abbreviations.html">Abbreviations</a></li>
+      <!-- Using absolute paths for links ensures the correct location is used -->
+      <li><a href="/book/front-matter/title.html">Title Page</a></li>
+      <li><a href="/book/front-matter/copyright.html">Copyright Page</a></li>
+      <li><a href="/book/front-matter/acknowledgements.html">Acknowledgements</a></li>
+      <li><a href="/book/front-matter/contents.html">Contents</a></li>
+      <li><a href="/book/front-matter/abbreviations.html">Abbreviations</a></li>
     </ul>
   </div>
 
   <div id="chapters" class="tab-content">
     <h2>Chapters</h2>
     <ul>
-      <li><a href="book/chapters/chapter1.html">Chapter 1</a></li>
-      <li><a href="book/chapters/chapter2.html">Chapter 2</a></li>
-      <li><a href="book/chapters/chapter3.html">Chapter 3</a></li>
-      <li><a href="book/chapters/chapter4.html">Chapter 4</a></li>
-      <li><a href="book/chapters/chapter5.html">Chapter 5</a></li>
-      <li><a href="book/chapters/chapter6.html">Chapter 6</a></li>
-      <li><a href="book/chapters/chapter7.html">Chapter 7</a></li>
-      <li><a href="book/chapters/chapter8.html">Chapter 8</a></li>
-      <li><a href="book/chapters/chapter9.html">Chapter 9</a></li>
-      <li><a href="book/chapters/chapter10.html">Chapter 10</a></li>
+      <li><a href="/book/chapters/chapter1.html">Chapter 1</a></li>
+      <li><a href="/book/chapters/chapter2.html">Chapter 2</a></li>
+      <li><a href="/book/chapters/chapter3.html">Chapter 3</a></li>
+      <li><a href="/book/chapters/chapter4.html">Chapter 4</a></li>
+      <li><a href="/book/chapters/chapter5.html">Chapter 5</a></li>
+      <li><a href="/book/chapters/chapter6.html">Chapter 6</a></li>
+      <li><a href="/book/chapters/chapter7.html">Chapter 7</a></li>
+      <li><a href="/book/chapters/chapter8.html">Chapter 8</a></li>
+      <li><a href="/book/chapters/chapter9.html">Chapter 9</a></li>
+      <li><a href="/book/chapters/chapter10.html">Chapter 10</a></li>
     </ul>
   </div>
 
   <div id="back-matter" class="tab-content">
     <h2>Back Matter</h2>
     <ul>
-      <li><a href="book/back-matter/references.html">References</a></li>
+      <li><a href="/book/back-matter/references.html">References</a></li>
     </ul>
   </div>
 
@@ -129,6 +131,9 @@
       showTab('front-matter');
     });
   </script>
+  <!-- Include footnotes.js from the root of the public folder -->
+  <script src="/footnotes.js"></script>
 </body>
 </html>
+
 
