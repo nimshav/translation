@@ -11,5 +11,16 @@
   },
   "engines": {
     "node": "18.x"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimshav/translation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimshav/translation/issues"
+  },
+  "homepage": "https://github.com/nimshav/translation#readme"
 }
